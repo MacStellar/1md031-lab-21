@@ -1,1 +1,76 @@
 /*empty*/
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 19px;
+}
+
+header {
+  margin: 0px 20px;
+  padding: 2px;
+}
+
+header,
+header img {
+  height: 200px;
+  overflow: hidden;
+}
+
+header h1 {
+  position: absolute;
+  left: 130px;
+  top: 30px;
+}
+header img {
+  opacity: 0.4;
+  width: 100%;
+  height: auto;
+}
+
+section {
+  margin: 0.5em 20px;
+  padding: 0px 15px;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+}
+.a {
+  grid-column: 1;
+}
+.b {
+  grid-column: 2;
+}
+.c {
+  grid-column: 3;
+}
+
+/*section > div {
+  padding: 10px;
+}*/
+
+button {
+  margin: 20px;
+}
+
+button:hover {
+  background-color: blue;
+  cursor: pointer;
+}
+
+.burgerinfo {
+  background-color: black;
+  color: white;
+  float: left;
+  border: 2px dashed white;
+  width: 670px;
+}
+
+#orderform {
+  border: 2px dashed black;
+  width: 670px;
+}
+
+#ingredient {
+  font-weight: bold;
+}

@@ -3,15 +3,19 @@
   <head>
     <title>Order burgers</title>
     <meta charset="utf-8" />
+    <!--<link rel="stylesheet" type="text/css" href="/reset.css">-->
+    <link rel="stylesheet" type="text/css" href="/style.css">
   </head>
   <body>
     <header>
+      <img src="https://awrestaurants.com/sites/default/files/Spicy%20Papa%20Burger%20Combo%20Web%20Header_0.jpg">
       <h1>Welcome to BurgerOnline</h1>
     </header>
-    <section>
+    <section class="burgerinfo">
       <h2>Select burger</h2>
       <p>Here you can select the burger you want</p>
-      <div style="float: left">
+      <div class="wrapper">
+      <div class="box a" style="float:left;">
         <h3>The shoe burger</h3>
         <img
           src="https://cdn.trendhunterstatic.com/phpthumbnails/22/22829/22829_1_800.jpeg"
@@ -20,11 +24,10 @@
         <ul>
           <li>Not wearable</li>
           <li>Not a real shoe</li>
-          <li>Gluten free</li>
+          <li><span id="ingredient">Gluten</span> free</li>
         </ul>
       </div>
-
-      <div style="float: left">
+      <div class="box b" style="float:left;">
         <h3>The cute burgerino</h3>
         <img
           src="https://rlv.zcache.se/cute_buns_funny_burger_pun_poster-r7d0ec32519e5481bbb68fa2dceaf02ac_w2q_8byvr_307.jpg"
@@ -33,11 +36,10 @@
         <ul>
           <li>Can bite though</li>
           <li>Very tasty</li>
-          <li>Gluten neutral</li>
+          <li><span id="ingredient">Gluten</span> neutral</li>
         </ul>
       </div>
-
-      <div style="float: left">
+      <div class="box c" style="float:left;">
         <h3>The MEGA-burger</h3>
         <img
           src="https://media-cdn.tripadvisor.com/media/photo-s/08/04/2d/c4/funny-burger.jpg"
@@ -46,11 +48,12 @@
         <ul>
           <li>Very big</li>
           <li>Enormous</li>
-          <li>Gluten full</li>
+          <li><span id="ingredient">Gluten</span> full</li>
         </ul>
       </div>
+    </div>
     </section>
-    <section style="clear: both">
+    <section style="clear: both" id="orderform">
       <h2>Provide information</h2>
       <p>
         Here you will provide the information so that we can send the burger to
