@@ -1,144 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
   <head>
-    <title>Order burgers</title>
-    <meta charset="utf-8" />
-    <!--<link rel="stylesheet" type="text/css" href="/reset.css">-->
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <header>
-      <img src="https://awrestaurants.com/sites/default/files/Spicy%20Papa%20Burger%20Combo%20Web%20Header_0.jpg">
-      <h1>Welcome to BurgerOnline</h1>
-    </header>
-    <section class="burgerinfo">
-      <h2>Select burger</h2>
-      <p>Here you can select the burger you want</p>
-      <div class="wrapper">
-      <div class="box a" style="float:left;">
-        <h3>The shoe burger</h3>
-        <img
-          src="https://cdn.trendhunterstatic.com/phpthumbnails/22/22829/22829_1_800.jpeg"
-          style="height: 200px; width: 200px"
-        />
-        <ul>
-          <li>Not wearable</li>
-          <li>Not a real shoe</li>
-          <li><span id="ingredient">Gluten</span> free</li>
-        </ul>
-      </div>
-      <div class="box b" style="float:left;">
-        <h3>The cute burgerino</h3>
-        <img
-          src="https://rlv.zcache.se/cute_buns_funny_burger_pun_poster-r7d0ec32519e5481bbb68fa2dceaf02ac_w2q_8byvr_307.jpg"
-          style="height: 200px; width: 200px"
-        />
-        <ul>
-          <li>Can bite though</li>
-          <li>Very tasty</li>
-          <li><span id="ingredient">Gluten</span> neutral</li>
-        </ul>
-      </div>
-      <div class="box c" style="float:left;">
-        <h3>The MEGA-burger</h3>
-        <img
-          src="https://media-cdn.tripadvisor.com/media/photo-s/08/04/2d/c4/funny-burger.jpg"
-          style="height: 200px; width: 200px"
-        />
-        <ul>
-          <li>Very big</li>
-          <li>Enormous</li>
-          <li><span id="ingredient">Gluten</span> full</li>
-        </ul>
-      </div>
-    </div>
-    </section>
-    <section style="clear: both" id="orderform">
-      <h2>Provide information</h2>
-      <p>
-        Here you will provide the information so that we can send the burger to
-        you
-      </p>
-      <form>
-        <p>
-          <h3>Delivery information:</h3>
-          <label for="fullname">Full name</label>
-          <br />
-          <input
-            type="text"
-            id="fullname"
-            name="fn"
-            required="required"
-            placeholder="First- and Last name"
-          />
-        </p>
-        <p>
-          <label for="email">E-mail</label>
-          <br />
-          <input
-            type="email"
-            id="email"
-            name="em"
-            required="required"
-            placeholder="E-mail address"
-          />
-        </p>
-        <p>
-          <label for="street">Street</label>
-          <br />
-          <input
-            type="text"
-            id="street"
-            name="st"
-            required="required"
-            placeholder="Street name"
-          />
-          </p>
-        <p>
-          <label for="fullname">House</label>
-          <br />
-          <input
-            type="number"
-            id="house"
-            name="hs"
-            required="required"
-            placeholder="House number"
-          />
-        </p>
-        <p>
-          <label for="payment">Payment options</label>
-          <br />
-          <select id="recipient" name="rcp">
-          <option> Sweden HQ</option>
-          <option>London HQ</option>
-          <option>PayPal</option>
-          <option>Cash</option>
-          <option>BitCoin</option>
-
-         </select>
-        </p>
-        <p>
-        <label for="gender">Select gender</label>
-        <br />
-        <input type="radio" id="male" name="gender" value="male">
-        <label for="gender">Male</label>
-        <br />
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="gender">Female</label>
-        <br />
-        <input type="radio" id="undefined" name="gender" checked="checked" value="undefined">
-        <label for="gender">Undefined</label>
-        
-      </p>
-        </radio>
-        
-      </form>
-    </section>
-    <button type="submit">
-      <img src="https://i.pinimg.com/474x/3d/fb/6a/3dfb6acb0b823e78eff8ab8c14ab706f.jpg" style="width: 25px">
-      Send Info
-   </button>
-    <hr />
-    <footer>&copy;</footer>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
   </body>
 </html>

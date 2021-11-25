@@ -1,48 +1,59 @@
 <template>
   <div id="orders">
     <div id="orderList">
-      <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-        #{{ key }}: {{ order.orderItems.join(", ") }}
+      <div v-for="(order, key) in orders" v-bind:key="'order' + key">
+        <h4>#{{ key }}: {{ order.orderItems }}</h4>
+        <h5>
+          {{ order.fullName }}, {{ order.eMail }}, {{ order.gender }},
+          {{ order.recipient }}
+        </h5>
+        <br />
       </div>
       <button v-on:click="clearQueue">Clear Queue</button>
     </div>
     <div id="dots">
-        <div v-for="(order, key) in orders" v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}" v-bind:key="'dots' + key">
-          {{ key }}
-        </div>
+      <div
+        v-for="(order, key) in orders"
+        v-bind:style="{
+          left: order.details.x + 'px',
+          top: order.details.y + 'px',
+        }"
+        v-bind:key="'dots' + key"
+      >
+        {{ key }}
+      </div>
     </div>
   </div>
 </template>
 <script>
-import io from 'socket.io-client'
+import io from "socket.io-client";
 const socket = io();
 
 export default {
-  name: 'Dispatcher',
+  name: "Dispatcher",
   data: function () {
     return {
-      orders: null
-    }
+      orders: null,
+    };
   },
   created: function () {
-    socket.on('currentQueue', data =>
-      this.orders = data.orders);
+    socket.on("currentQueue", (data) => (this.orders = data.orders));
   },
   methods: {
     clearQueue: function () {
-      socket.emit('clearQueue');
-    }
-  }
-}
+      socket.emit("clearQueue");
+    },
+  },
+};
 </script>
 <style>
 #orderList {
-  top:1em;
-  left:1em;
+  top: 1em;
+  left: 1em;
   position: absolute;
   z-index: 2;
-  color:black;
-  background: rgba(255,255,255, 0.5);
+  color: black;
+  background: rgba(255, 255, 255, 0.5);
   padding: 1em;
 }
 #dots {
@@ -51,7 +62,7 @@ export default {
   padding: 0;
   background: url(/img/polacks.jpg);
   background-repeat: no-repeat;
-  width:1920px;
+  width: 1920px;
   height: 1078px;
   cursor: crosshair;
 }
@@ -61,8 +72,8 @@ export default {
   background: black;
   color: white;
   border-radius: 10px;
-  width:20px;
-  height:20px;
+  width: 20px;
+  height: 20px;
   text-align: center;
 }
 </style>
