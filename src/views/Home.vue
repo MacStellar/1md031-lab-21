@@ -16,8 +16,9 @@
         v-bind:key="burger.name"
         v-on:orderedBurger="addToOrder($event)"
       />
-      {{ amountOrdered }}
-      <!-- följde med från början
+
+      <!--{{ amountOrdered }} -->
+      <!--följde med från början
       <div id="map" v-on:click="addOrder">click here</div>
       -->
       <!-- Gammal display av burgare
@@ -150,7 +151,7 @@
         </div>
       </div>
     </form>
-    <p>
+    <!--<p>
       Alla värden:
       <br />
       {{ fullName }}
@@ -167,6 +168,7 @@
       <br />
       {{ orderedBurger }}
     </p>
+    -->
   </section>
   <div id="order">
     <button v-on:click="orderButton" type="submit">
